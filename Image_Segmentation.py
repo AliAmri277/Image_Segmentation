@@ -118,7 +118,8 @@ class Augment(layers.Layer):
         inputs = self.augment_inputs(inputs)
         labels = self.augment_labels(labels)
         return inputs,labels
-    
+
+   
 #%%
 #2.7. Convert into prefetch dataset
 BATCH_SIZE = 16
@@ -138,7 +139,7 @@ train_batches = (
     )
 
 val_batches = val_dataset.batch(BATCH_SIZE)
-train_batches=train_dataset.batch(BATCH_SIZE)
+
 #%%
 #3. Visualize some examples
 def display(display_list):
