@@ -19,3 +19,28 @@ drug testing and reduce the time for new drugs to become available to the public
 
 #### 2. Data Preprocessing
         -The input images and masks images is normalized to 255. Both image and masks is split using scikitlearn.model_selection method, train_test_split().
+<p align="center">
+<img src="Resources/Inp_Out.png" class="center"></p>  
+
+#### 3. Model Development
+        -The MobileNetV2 will be use as a feature extraction with frozen layers. The downsampled image will then be upsampled using the U-Net model. The U-Net model structure can be seen below.
+<p align="center">
+<img src="Resources/model.png" class="center"></p>
+
+
+#### 4. Model evaluation
+        -The model were evaluate using train inputs image and true mask to sse the predicted mask before the model training. The ressult can be seen below.
+<p align="center">
+<img src="Resources/before.png" class="center"></p> 
+
+Training Evaluation 
+<p align="center">
+<img src="Resources/val.png" class="center"></p>
+From the the graph, the training shows that the model is overfiting. 
+
+After Training 
+<p align="center">
+<img src="Resources/after_validation.png" class="center"></p>
+
+## Acknowledgements
+The Dataset used is obtained from [Kaggle](https://www.kaggle.com/competitions/data-science-bowl-2018/overview)
