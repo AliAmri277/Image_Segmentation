@@ -138,7 +138,7 @@ train_batches = (
     )
 
 val_batches = val_dataset.batch(BATCH_SIZE)
-test_batches=test_dataset.batch(BATCH_SIZE)
+train_batches=train_dataset.batch(BATCH_SIZE)
 #%%
 #3. Visualize some examples
 def display(display_list):
